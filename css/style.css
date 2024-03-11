@@ -1,0 +1,45 @@
+/* Fonts
+==================================================================*/
+
+
+
+/* =============================================================== */
+
+
+
+/* Base
+==================================================================*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-size: 16px;
+	line-height: normal;
+	/* Буду подгонять line-height */
+	font-weight: normal;
+	color: #181818;
+
+	background: #F4F4F4;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	max-width: 1216px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+/* =============================================================== */
