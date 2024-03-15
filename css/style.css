@@ -1,7 +1,81 @@
 /* Fonts
 ==================================================================*/
+/* orbitron-regular - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/orbitron-v31-latin-regular.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
+/* orbitron-700 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/orbitron-v31-latin-700.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
+/* lexend-exa-300 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Lexend Exa';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/lexend-exa-v30-latin-300.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lexend-exa-regular - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Lexend Exa';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/lexend-exa-v30-latin-regular.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lexend-exa-500 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Lexend Exa';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/lexend-exa-v30-latin-500.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lexend-exa-600 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Lexend Exa';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/lexend-exa-v30-latin-600.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lexend-exa-700 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Lexend Exa';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/lexend-exa-v30-latin-700.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 /* =============================================================== */
 
@@ -20,15 +94,16 @@ html {
 }
 
 body {
-	font-family: 'Manrope';
+	font-family: 'Lexend Exa';
 	font-style: normal;
-	font-size: 16px;
-	line-height: normal;
-	/* Буду подгонять line-height */
-	font-weight: normal;
-	color: #181818;
+	font-size: 28px;
+	line-height: 56px;
+	font-weight: 300;
+	color: rgb(247, 247, 247);
 
-	background: #F4F4F4;
+	background: rgb(61, 45, 104);
+
+	position: relative;
 }
 
 img {
@@ -37,9 +112,184 @@ img {
 }
 
 .wrapper {
-	max-width: 1216px;
+	max-width: 1280px;
 	margin: 0 auto;
-	padding: 0 16px;
+	padding: 0 64px;
 }
+
+/* BASE TITLES */
+.section-title {
+	font-size: 56px;
+	font-weight: 600;
+	line-height: 80px;
+}
+
+/* =============================================================== */
+
+
+/* Header
+==================================================================*/
+.header {
+	padding: 32px 0;
+	margin-bottom: 28px;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* HEADER LOGO */
+.header__logo-link {
+	color: rgb(247, 247, 247);
+	font-family: 'Orbitron';
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 32px;
+	text-decoration: none;
+
+	transition: .2s linear;
+}
+
+.header__logo-link:hover {
+	opacity: .7;
+}
+
+/* ELLIPSE-1 */
+.ellipse-1 {
+	width: 258px;
+	height: 258px;
+
+	border-radius: 258px;
+	filter: blur(250px);
+	background: rgb(106, 130, 255);
+
+	position: absolute;
+	z-index: -2;
+	top: 16px;
+	right: 384px;
+}
+
+/* HEADER BURGER BUTTON */
+.header__burger-button-thumbnail {
+	cursor: pointer;
+
+	transition: .2s linear;
+}
+
+.header__burger-button-thumbnail:hover {
+	opacity: .7;
+}
+
+/* =============================================================== */
+
+
+/* Intro section
+==================================================================*/
+.intro {
+	margin-bottom: 240px;
+}
+
+/* ELLIPSE-2 */
+.ellipse-2 {
+	width: 287px;
+	height: 287px;
+
+	border-radius: 287px;
+	filter: blur(300px);
+	background: rgb(250, 115, 72);
+
+	position: absolute;
+	z-index: -2;
+	top: 221px;
+	left: 485px;
+}
+
+.intro__title {
+	margin-bottom: 238px;
+	max-width: 1000px;
+
+	font-size: 96px;
+	font-weight: 600;
+	line-height: 134px;
+}
+
+.intro__title--word--wrap {
+	padding: 16px 56px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 104px;
+	backdrop-filter: blur(10px);
+	background: rgb(250, 115, 72);
+}
+
+.intro__title--word--wrap:nth-child(1) {
+	padding: 16px 48px;
+
+	transform: rotate(-6deg);
+}
+
+.intro__title--word--wrap:nth-child(2) {
+	transform: rotate(6deg);
+}
+
+/* ILLUSTRATIONS */
+.intro--illustration--semicircle {
+	position: absolute;
+	z-index: 1;
+	top: 213px;
+	right: 407px;
+}
+
+.intro--illustration--arrow {
+	position: absolute;
+	z-index: 1;
+	top: 612px;
+	right: 503px;
+}
+
+/* ILLUSTRATIONS END */
+
+.intro__subtitle-border {
+	max-width: 100%;
+	padding: 56px;
+
+	border: 3px dashed rgb(96, 86, 146);
+	border-radius: 40px;
+}
+
+.intro__subtitle {
+	width: 1040px;
+}
+
+.intro__subtitle--word--wrap {
+	color: #FFAF99;
+	font-weight: 700;
+}
+
+/* ELLIPSE-3 */
+.ellipse-3 {
+	width: 287px;
+	height: 287px;
+
+	border-radius: 287px;
+	filter: blur(350px);
+	background: rgb(250, 115, 72);
+
+	position: absolute;
+	z-index: -2;
+	top: 1083px;
+	right: 384px;
+}
+
+/* =============================================================== */
+
+
+/* Advantages section
+==================================================================*/
+
 
 /* =============================================================== */
