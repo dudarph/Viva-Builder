@@ -111,6 +111,10 @@ img {
 	height: auto;
 }
 
+.hidden {
+	display: none;
+}
+
 .wrapper {
 	max-width: 1280px;
 	margin: 0 auto;
@@ -119,10 +123,43 @@ img {
 
 /* BASE TITLES */
 .section-title {
+	margin-bottom: 80px;
+
 	font-size: 56px;
 	font-weight: 600;
 	line-height: 80px;
 }
+
+/* BASE BUTTONS */
+.scroll-button {
+	max-width: 376px;
+	display: inline-block;
+
+	text-decoration: none;
+	color: rgb(247, 247, 247);
+	font-family: 'Lexend Exa';
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 32px;
+	text-wrap: nowrap;
+
+	border-radius: 48px;
+	backdrop-filter: blur(20px);
+	background: rgb(250, 115, 72);
+	transition: .2s linear;
+
+	position: relative;
+}
+
+.scroll-button:hover,
+.scroll-button:active {
+	background: rgb(252, 84, 33);
+}
+
+/* .main {
+	visibility: hidden;
+} */
+
 
 /* =============================================================== */
 
@@ -132,6 +169,17 @@ img {
 .header {
 	padding: 32px 0;
 	margin-bottom: 28px;
+
+	transition: .2s linear;
+}
+
+.header--active {
+	backdrop-filter: blur(40px);
+	background: rgba(61, 45, 104, 0.12);
+
+	position: sticky;
+	top: 0;
+	z-index: 2;
 }
 
 .header__inner {
@@ -156,20 +204,7 @@ img {
 	opacity: .7;
 }
 
-/* ELLIPSE-1 */
-.ellipse-1 {
-	width: 258px;
-	height: 258px;
 
-	border-radius: 258px;
-	filter: blur(250px);
-	background: rgb(106, 130, 255);
-
-	position: absolute;
-	z-index: -2;
-	top: 16px;
-	right: 384px;
-}
 
 /* HEADER BURGER BUTTON */
 .header__burger-button-thumbnail {
@@ -189,6 +224,23 @@ img {
 ==================================================================*/
 .intro {
 	margin-bottom: 240px;
+
+	position: relative;
+}
+
+/* ELLIPSE-1 */
+.ellipse-1 {
+	width: 258px;
+	height: 258px;
+
+	border-radius: 258px;
+	filter: blur(250px);
+	background: rgb(106, 130, 255);
+
+	position: absolute;
+	z-index: -2;
+	top: -156px;
+	right: 384px;
 }
 
 /* ELLIPSE-2 */
@@ -202,7 +254,7 @@ img {
 
 	position: absolute;
 	z-index: -2;
-	top: 221px;
+	top: 49px;
 	left: 485px;
 }
 
@@ -237,17 +289,17 @@ img {
 }
 
 /* ILLUSTRATIONS */
-.intro--illustration--semicircle {
+.intro__illustration--semicircle {
 	position: absolute;
 	z-index: 1;
-	top: 213px;
+	top: 41px;
 	right: 407px;
 }
 
-.intro--illustration--arrow {
+.intro__illustration--arrow {
 	position: absolute;
 	z-index: 1;
-	top: 612px;
+	top: 440px;
 	right: 503px;
 }
 
@@ -281,7 +333,7 @@ img {
 
 	position: absolute;
 	z-index: -2;
-	top: 1083px;
+	top: 912px;
 	right: 384px;
 }
 
@@ -290,6 +342,486 @@ img {
 
 /* Advantages section
 ==================================================================*/
+.advantages {
+	margin-bottom: 193px;
+
+	position: relative;
+}
+
+/* ELLIPSE-4 */
+.ellipse-4 {
+	width: 161px;
+	height: 161px;
+
+	border-radius: 161px;
+	filter: blur(250px);
+	background: rgb(250, 115, 72);
+
+	position: absolute;
+	z-index: -2;
+	top: 256px;
+	left: 482px;
+}
+
+.advantages__subtitle {
+	max-width: 568px;
+	margin-bottom: 48px;
+}
+
+.advantages__button {
+	padding: 24px 157px 24px 109px;
+}
+
+.advantages__button-arrow {
+	position: absolute;
+	top: 22px;
+	right: 109px;
+}
+
+/* ILLUSTRATIONS */
+.advantages__illustration--arrow {
+	position: absolute;
+	z-index: 1;
+	top: 549px;
+	left: 784px;
+}
+
+.advantages__illustration--AI {
+	position: absolute;
+	z-index: 1;
+	top: 160px;
+	right: 393px;
+}
+
+/* ILLUSTRATIONS END */
+
+/* ELLIPSE-5 */
+.ellipse-5 {
+	width: 231px;
+	height: 231px;
+
+	border-radius: 231px;
+	filter: blur(300px);
+	background: rgb(106, 130, 255);
+
+	position: absolute;
+	z-index: -2;
+	top: 508px;
+	right: 397px;
+}
+
+
+/* =============================================================== */
+
+
+/* Features section
+==================================================================*/
+.features {
+	padding: 120px 0;
+	margin-bottom: 120px;
+
+	background: rgb(71, 53, 118);
+
+	position: relative;
+	z-index: 0;
+}
+
+/* ELLIPSE-6 */
+.ellipse-6 {
+	width: 120px;
+	height: 120px;
+
+	border-radius: 120px;
+	filter: blur(225px);
+	background: rgb(250, 115, 72);
+
+	position: absolute;
+	z-index: -2;
+	top: 160px;
+	right: 440px;
+}
+
+.highlight {
+	display: inline-flex;
+}
+
+.highlight:first-child {
+	margin-bottom: 48px;
+}
+
+.highlight::before {
+	content: url('../img/svg/highlight-mark.svg');
+	/* background: url('../img/svg/highlight-mark.svg') no-repeat left top; */
+	width: 56px;
+	height: 56px;
+	margin-right: 32px;
+}
+
+/* =============================================================== */
+
+
+/* Survey section
+==================================================================*/
+.survey {
+	margin-bottom: 179px;
+
+	position: relative;
+}
+
+/* ELLIPSE-7 */
+.ellipse-7 {
+	width: 161px;
+	height: 161px;
+
+	border-radius: 161px;
+	filter: blur(250px);
+	background: rgb(250, 115, 72);
+
+	position: absolute;
+	z-index: -2;
+	top: 256px;
+	left: 482px;
+}
+
+/* ILLUSTRATIONS */
+.survey__illustration--AI {
+	position: absolute;
+	z-index: 1;
+	top: 160px;
+	left: 440px;
+}
+
+/* ILLUSTRATIONS END */
+
+.survey__subtitle {
+	max-width: 568px;
+	margin-left: 584px;
+	margin-bottom: 48px;
+}
+
+.survey__button {
+	margin-left: 584px;
+	padding: 24px 89px 24px 41px;
+}
+
+.survey__button-arrow {
+	position: absolute;
+	top: 22px;
+	right: 41px;
+}
+
+/* ILLUSTRATIONS */
+.survey__illustration--arrow {
+	position: absolute;
+	z-index: 1;
+	top: 538px;
+	right: 413px;
+}
+
+/* ILLUSTRATIONS END */
+
+/* =============================================================== */
+
+
+/* Referal section
+==================================================================*/
+.referal {
+	padding: 120px 0 266px;
+	margin-bottom: 120px;
+
+	background: rgb(71, 53, 118);
+
+	position: relative;
+	z-index: 0;
+}
+
+.referal::content {
+	position: static;
+}
+
+/* ELLIPSE-8 */
+.ellipse-8 {
+	width: 131px;
+	height: 131px;
+
+	border-radius: 131px;
+	filter: blur(250px);
+	background: rgb(250, 115, 72);
+
+	position: absolute;
+	z-index: -2;
+	top: 132px;
+	right: 440px;
+}
+
+.referal__subtitle {
+	max-width: 568px;
+	margin-bottom: 48px;
+}
+
+.referal__button {
+	padding: 24px 157px 24px 109px;
+}
+
+.referal__button-arrow {
+	position: absolute;
+	top: 22px;
+	right: 109px;
+}
+
+/* ILLUSTRATIONS */
+.referal__illustration--arrow {
+	position: absolute;
+	z-index: 1;
+	top: 547px;
+	left: 784px;
+}
+
+.referal__illustration--AI {
+	position: absolute;
+	z-index: 1;
+	top: 259px;
+	right: 451px;
+}
+
+/* ILLUSTRATIONS END */
+
+/* =============================================================== */
+
+
+/* Invitation section
+==================================================================*/
+.invitation {
+	margin-bottom: 269px;
+
+	position: relative;
+}
+
+.invitation__content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.invitation__subtitle {
+	max-width: 502px;
+}
+
+/* ELLIPSE-9 */
+.ellipse-9 {
+	width: 231px;
+	height: 231px;
+
+	border-radius: 231px;
+	filter: blur(300px);
+	background: rgb(106, 130, 255);
+
+	position: absolute;
+	z-index: -2;
+	top: 324px;
+	left: 604px;
+}
+
+/* ILLUSTRATIONS */
+.invitation__illustration--semicircle {
+	position: absolute;
+	z-index: 1;
+	top: 400px;
+	left: 434px;
+}
+
+.invitation__illustration--arrow {
+	position: absolute;
+	z-index: 1;
+	top: 528px;
+	left: 749px;
+}
+
+/* ILLUSTRATIONS END */
+
+.invitation__form {
+	max-width: 544px;
+}
+
+.input-box {
+	margin-bottom: 64px;
+	width: 100%;
+}
+
+.input {
+	width: 100%;
+	padding: 24px 32px;
+
+	color: rgb(247, 247, 247);
+	font-family: 'Lexend Exa';
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 32px;
+
+	border: 1px solid rgb(157, 144, 208);
+	border-radius: 48px;
+	background: transparent;
+}
+
+.input::placeholder {
+	color: rgb(247, 247, 247);
+}
+
+.invitation__button {
+	padding: 24px 241px 24px 193px;
+	width: 100%;
+
+	color: rgb(247, 247, 247);
+	font-family: 'Lexend Exa';
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 32px;
+	white-space: nowrap;
+
+	border: 0;
+	border-radius: 48px;
+	backdrop-filter: blur(20px);
+	background: rgb(250, 115, 72);
+
+	position: relative;
+}
+
+.invitation__button-arrow {
+	position: absolute;
+	top: 22px;
+	right: 193px;
+}
+
+/* =============================================================== */
+
+
+/* Footer
+==================================================================*/
+.footer {
+	padding: 32px 0;
+
+	background: rgb(53, 40, 89);
+}
+
+.footer__inner {
+	display: flex;
+}
+
+.footer__rights {
+	margin-right: 448px;
+
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 32px;
+}
+
+.footer__terms {
+	margin-right: 48px;
+}
+
+.footer__terms,
+.footer__policy {
+	text-decoration: none;
+	color: rgb(247, 247, 247);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 32px;
+
+	transition: .2s linear;
+}
+
+.footer__terms:hover,
+.footer__policy:hover {
+	opacity: .7;
+}
+
+/* =============================================================== */
+
+
+/* Modal menu
+==================================================================*/
+.burger-menu {
+	padding-bottom: 173px;
+	width: 100%;
+	height: 100%;
+
+	backdrop-filter: blur(10px);
+	background: rgb(61, 45, 104);
+	transition: .9s linear;
+	overflow: auto;
+
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+}
+
+.burger-menu__header {
+	padding: 32px 0;
+	margin-bottom: 88px;
+}
+
+.burger-menu__header-wrapper {
+	padding: 0 64px;
+	margin: 0 auto;
+	display: flex;
+	max-width: 1280px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.burger-menu__header-button-thumbnail {
+	cursor: pointer;
+
+	transition: .2s linear;
+}
+
+.burger-menu__header-button-thumbnail:hover {
+	opacity: .7;
+}
+
+/* ELLIPSE-10 */
+.ellipse-10 {
+	width: 258px;
+	height: 258px;
+
+	border-radius: 258px;
+	filter: blur(250px);
+	background: rgb(106, 130, 255);
+
+	position: absolute;
+	z-index: 1000;
+	top: 200px;
+	left: 384px;
+}
+
+.burger-menu__list {
+	max-width: 1152px;
+	margin: 0 auto;
+}
+
+.burger-menu__nav-item {
+	padding-bottom: 31px;
+	margin-bottom: 33px;
+
+	border-bottom: 2px solid rgb(71, 53, 118);
+}
+
+.burger-menu__nav-link {
+	text-decoration: none;
+	color: rgb(247, 247, 247);
+	font-family: 'Lexend Exa';
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 48px;
+
+	transition: .2s linear;
+}
+
+.burger-menu__nav-link:hover {
+	opacity: .7;
+}
+
+
 
 
 /* =============================================================== */
