@@ -1,0 +1,107 @@
+@media screen and (max-width: 1283px) {
+
+	/* Intro section */
+	.ellipse-1 {
+		top: -156px;
+		right: 64px;
+	}
+
+	.ellipse-2 {
+		top: 49px;
+		left: 165px;
+	}
+
+	.intro__illustration--semicircle {
+		top: 41px;
+		right: 87px;
+	}
+
+	.intro__illustration--arrow {
+		top: 416px;
+		right: 183px;
+	}
+
+	.ellipse-3 {
+		top: 887px;
+		right: 64px;
+	}
+
+
+	/* Advantages section */
+	.ellipse-4 {
+		top: 256px;
+		left: 162px;
+	}
+
+	.advantages__illustration--arrow {
+		top: 549px;
+		left: 464px;
+	}
+
+	.advantages__illustration--AI {
+		top: 160px;
+		right: 73px;
+	}
+
+	.ellipse-5 {
+		top: 508px;
+		right: 77px;
+	}
+
+	/* Features section */
+	.ellipse-6 {
+		top: 180px;
+		right: 120px;
+	}
+
+
+	/* Survey section */
+	.ellipse-7 {
+		top: 256px;
+		left: 162px;
+	}
+
+	.survey__illustration--AI {
+		top: 160px;
+		left: 120px;
+	}
+
+	.survey__illustration--arrow {
+		top: 538px;
+		right: 93px;
+	}
+
+	/* Referal section */
+	.ellipse-8 {
+		top: 132px;
+		right: 120px;
+	}
+
+	.referal__illustration--arrow {
+		top: 547px;
+		left: 464px;
+	}
+
+	.referal__illustration--AI {
+		top: 259px;
+		right: 131px;
+	}
+
+	/* Invitation section */
+	.ellipse-9 {
+		top: 324px;
+		left: 284px;
+	}
+
+	.invitation__illustration--semicircle {
+		top: 400px;
+		left: 114px;
+	}
+
+	.invitation__illustration--arrow {
+		top: 528px;
+		left: 429px;
+	}
+
+	/* Burger-Menu */
+}

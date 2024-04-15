@@ -22,32 +22,54 @@ window.addEventListener("scroll", function () {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Smooth scroll from buttons
-document.querySelector(".main").addEventListener("click", function (e) {
-	e.preventDefault();
+const scrollFromButtons = function () {
+	document.querySelector(".main").addEventListener("click", function (e) {
+		e.preventDefault();
 
-	if (e.target.classList.contains("scroll-button")) {
-		const href = e.target.getAttribute("href");
-		document
-			.querySelector(href)
-			.scrollIntoView({ behavior: "smooth", block: "center" });
-	}
-});
-
+		if (e.target.classList.contains("scroll-button")) {
+			const href = e.target.getAttribute("href");
+			document
+				.querySelector(href)
+				.scrollIntoView({ behavior: "smooth", block: "center" });
+		}
+	});
+};
+scrollFromButtons();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Modal menu
 const openModalMenu = function (e) {
 	e.preventDefault();
-	burgerModalMenu.classList.remove("hidden");
+	burgerModalMenu.classList.add("visible");
 };
 
 const closeModalMenu = function () {
-	burgerModalMenu.classList.add("hidden");
+	burgerModalMenu.classList.remove("visible");
 };
 
 buttonOpenModalMenu.addEventListener("click", openModalMenu);
 buttonCloseModalMenu.addEventListener("click", closeModalMenu);
 document.addEventListener("keydown", function (e) {
-	if (e.key === "Escape" && !burgerModalMenu.classList.contains("hidden")) {
+	if (e.key === "Escape" && burgerModalMenu.classList.contains("visible")) {
 		closeModalMenu();
 	}
 });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Smooth scroll from navigation
+const scrollFromNavigation = function () {
+	document
+		.querySelector(".burger-menu__list")
+		.addEventListener("click", function (e) {
+			e.preventDefault();
+
+			closeModalMenu();
+
+			if (e.target.classList.contains("burger-menu__nav-link")) {
+				const href = e.target.getAttribute("href");
+				document
+					.querySelector(href)
+					.scrollIntoView({ behavior: "smooth", block: "center" });
+			}
+		});
+};
+scrollFromNavigation();
