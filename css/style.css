@@ -831,14 +831,13 @@ img {
 	transition: .2s linear;
 }
 
-.burger-menu__nav-link {
-	transition: .4s linear;
-}
-
 .burger-menu__nav-link:hover {
-	color: rgb(250, 115, 72);
+	margin-left: 40px;
+	padding-right: 50%;
+	/* значение сдвига при наведении */
 
-	transform: translateX(40px)
+	color: rgb(250, 115, 72);
+	background: url('../img/svg/burger-link-arrow-forward.svg') no-repeat right;
 }
 
 
